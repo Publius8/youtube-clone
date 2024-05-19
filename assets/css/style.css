@@ -1,0 +1,30 @@
+/* Default state: Show aside and main width adjusted */
+#Search:not(:checked) ~ .flex > main {
+    width: calc(100% - 220px);
+    transition: 0.6s;
+}
+
+/* Checkbox checked state: Hide aside and main width 100% */
+#Search:checked ~ .flex > main {
+    width: 95%;
+    transition: 0.6s;
+}
+/* Hide aside when checkbox is checked */
+#Search:checked ~ .flex > aside {
+    display: none;
+}
+
+/* Show aside when checkbox is not checked (default state) */
+#Search:not(:checked) ~ .flex > aside {
+    display: flex;
+}
+
+#Search:checked ~ .flex > div {
+    display: flex;
+}
+
+/* Show aside when checkbox is not checked (default state) */
+#Search:not(:checked) ~ .flex > div {
+    display: none;
+}
+
